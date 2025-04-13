@@ -4,8 +4,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>فرّغلي - تفريغ الصوت من الفيديو</title>
+  <title>فرّغلي - تحويل الكلام إلى نص في الفيديوهات | تطبيق Whisper بالعربية</title>
+
+  <meta name="description"
+    content="فرّغلي هو تطبيق سطح مكتب مجاني يستخدم Whisper لتحويل الصوت في الفيديو إلى نص مكتوب وملفات ترجمة SRT / TXT / JSON بدقة عالية. يدعم اللغة العربية واللغات العالمية.">
+  <meta name="keywords"
+    content="تفريغ صوتي, تحويل صوت إلى نص, Whisper, ترجمة الفيديو, تفريغ الفيديو, فرغلي, نص من فيديو, صوتيات, Whisper بالعربية, SRT, تطبيق Whisper, Arabic Whisper, transcribe video, whisper electron">
+  <meta name="author" content="Rayan Almalki (rn0x)" />
+
+  <!-- Open Graph Tags (للسوشيال ميديا) -->
+  <meta property="og:title" content="فرّغلي - تطبيق تفريغ الكلام من الفيديو">
+  <meta property="og:description" content="فرّغلي يحول الصوت إلى نص من الفيديو باستخدام Whisper مع دعم اللغة العربية.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/rn0x/farraghli/main/screenshots/farraghli.png">
+  <meta property="og:url" content="https://rn0x.github.io/farraghli">
+  <meta property="og:type" content="website">
+
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/icon.ico" />
   <style>
     * {
       box-sizing: border-box;
@@ -98,12 +116,33 @@
       font-size: 14px;
       color: #777;
     }
+
+    .comparison img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .compare-wrapper {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .compare-wrapper>div {
+      flex: 1 1 45%;
+    }
   </style>
 </head>
 
 <body>
   <header>
     <h1>فرّغلي</h1>
+
+    <img src="screenshots/farraghli.png" alt="شعار فرّغلي" style="width: 100px; margin: 20px auto; display: block;" />
+
     <p>تطبيق سطح مكتب لتفريغ الكلام من الفيديوهات باستخدام Whisper</p>
   </header>
 
@@ -117,14 +156,36 @@
         <li>دمج الترجمة في الفيديو باستخدام خط Hacen Saudi Arabia</li>
         <li>واجهة عربية أنيقة وسهلة الاستخدام</li>
       </ul>
+
+      <img src="screenshots/Farraghli_WX2bAAGlmQ.png" alt="لقطة شاشة للتطبيق"
+        style="margin-top: 30px; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); max-width: 100%;" />
+
     </section>
+
+    <section class="comparison">
+      <h2>مقارنة قبل / بعد</h2>
+      <div class="compare-wrapper">
+        <div>
+          <h3 style="text-align: center;">قبل</h3>
+          <img src="screenshots/demo_before.gif" alt="قبل" />
+        </div>
+        <div>
+          <h3 style="text-align: center;">بعد</h3>
+          <img src="screenshots/demo_after.gif" alt="بعد" />
+        </div>
+      </div>
+    </section>
+
 
     <section class="downloads">
       <h2>روابط التحميل</h2>
       <div class="download-buttons">
-        <a href="https://github.com/rn0x/farraghli/releases/download/v1.0.0/Farraghli.Setup.1.0.0.zip" class="btn">تحميل البرنامج</a>
-        <a href="https://github.com/rn0x/farraghli/releases/download/v1.0.0/python-embed.zip" class="btn">تحميل Python Embed</a>
-        <a href="https://github.com/rn0x/farraghli/releases/download/v1.0.0/Hacen.Saudi.Arabia.ttf" class="btn">تحميل الخط</a>
+        <a href="https://github.com/rn0x/farraghli/releases/download/v1.0.0/Farraghli.Setup.1.0.0.zip" class="btn">تحميل
+          البرنامج</a>
+        <a href="https://github.com/rn0x/farraghli/releases/download/v1.0.0/python-embed.zip" class="btn">تحميل Python
+          Embed</a>
+        <a href="https://github.com/rn0x/farraghli/releases/download/v1.0.0/Hacen.Saudi.Arabia.ttf" class="btn">تحميل
+          الخط</a>
       </div>
     </section>
 
@@ -134,7 +195,8 @@
         بعد تحميل التطبيق:
       </p>
       <ul>
-        <li>فك الضغط عن ملف <strong>python-embed.zip</strong> وضع المجلد داخل مجلد المشروع الرئيسي (إذا كنت تنوي التطوير أو التشغيل المحلي).</li>
+        <li>فك الضغط عن ملف <strong>python-embed.zip</strong> وضع المجلد داخل مجلد المشروع الرئيسي (إذا كنت تنوي التطوير
+          أو التشغيل المحلي).</li>
         <li>قم بتثبيت الخط <strong>Hacen Saudi Arabia.ttf</strong> بالنقر عليه أو باستخدام الأمر التالي في PowerShell:
           <br><code>node utils/install-font.mjs</code>
         </li>
