@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>فرّغلي - تفريغ الصوت من الفيديو</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Cairo', sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #f7f9fc;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    header {
+      background-color: #0078d4;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-size: 36px;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      color: #0078d4;
+      margin-bottom: 10px;
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 17px;
+    }
+
+    .features ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .features li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    .features li::before {
+      content: "\2714";
+      position: absolute;
+      left: -20px;
+      color: #0078d4;
+    }
+
+    .download-buttons {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin: 10px 5px;
+      background-color: #0078d4;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #005fa3;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>فرّغلي</h1>
+    <p>تطبيق سطح مكتب لتفريغ الكلام من الفيديوهات باستخدام Whisper</p>
+  </header>
+
+  <div class="container">
+    <section class="features">
+      <h2>المميزات</h2>
+      <ul>
+        <li>تحويل الصوت من الفيديو إلى نص بدقة عالية</li>
+        <li>دعم الترجمة إلى عدة لغات</li>
+        <li>إخراج الترجمة بصيغ SRT / TXT / JSON</li>
+        <li>دمج الترجمة في الفيديو باستخدام خط Hacen Saudi Arabia</li>
+        <li>واجهة عربية أنيقة وسهلة الاستخدام</li>
+      </ul>
+    </section>
+
+    <section class="downloads">
+      <h2>روابط التحميل</h2>
+      <div class="download-buttons">
+        <a href="https://github.com/rn0x/farraghli/releases/download/v1.0.0/Farraghli.Setup.1.0.0.zip" class="btn">تحميل البرنامج</a>
+        <a href="https://github.com/rn0x/farraghli/releases/download/v1.0.0/python-embed.zip" class="btn">تحميل Python Embed</a>
+        <a href="https://github.com/rn0x/farraghli/releases/download/v1.0.0/Hacen.Saudi.Arabia.ttf" class="btn">تحميل الخط</a>
+      </div>
+    </section>
+
+    <section class="instructions">
+      <h2>تعليمات التثبيت</h2>
+      <p>
+        بعد تحميل التطبيق:
+      </p>
+      <ul>
+        <li>فك الضغط عن ملف <strong>python-embed.zip</strong> وضع المجلد داخل مجلد المشروع الرئيسي (إذا كنت تنوي التطوير أو التشغيل المحلي).</li>
+        <li>قم بتثبيت الخط <strong>Hacen Saudi Arabia.ttf</strong> بالنقر عليه أو باستخدام الأمر التالي في PowerShell:
+          <br><code>node utils/install-font.mjs</code>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>المصدر</h2>
+      <p>
+        يمكن العثور على كود المصدر والمساهمة في تطوير المشروع عبر GitHub:
+        <a href="https://github.com/rn0x/farraghli" target="_blank">rn0x/farraghli</a>
+      </p>
+    </section>
+  </div>
+
+  <footer>
+    &copy; 2025 Rayan Almalki (rn0x) - جميع الحقوق محفوظة
+  </footer>
+</body>
+
+</html>
