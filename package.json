@@ -1,0 +1,48 @@
+{
+  "name": "farraghli",
+  "version": "1.0.0",
+  "description": "Whisper-based tool for transcription and subtitles.",
+  "author": "Rayan almalki (rn0x)",
+  "license": "MIT",
+  "main": "main.mjs",
+  "scripts": {
+    "start": "electron .",
+    "dev": "nodemon --watch main.mjs --exec \"electron .\"",
+    "install-font": "node utils/install-font.mjs",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "com.farraghli.app",
+    "productName": "Farraghli",
+    "compression": "store",
+    "asar": false,
+    "directories": {
+      "buildResources": "assets"
+    },
+    "files": [
+      "**/*",
+      "!python/whisper/*.pt",
+      "!**/*.7z",
+      "!node_modules/.cache"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowElevation": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true
+    }
+  },
+  "devDependencies": {
+    "electron": "^35.1.5",
+    "electron-builder": "^26.0.12",
+    "nodemon": "^3.1.9"
+  },
+  "dependencies": {
+    "v8-compile-cache": "^2.4.0"
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فرّغلي</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="card">
+
+        <div class="form-group">
+            <label for="videoInput">📁 اختر ملف الفيديو:</label>
+            <button id="videoInput">استعراض الفيديو</button>
+        </div>
+
+        <div class="form-group">
+            <label for="saveLocationBtn">💾 مكان حفظ الفيديو النهائي:</label>
+            <button id="saveLocationBtn">تحديد مكان الحفظ</button>
+            <span id="selectedPath"></span>
+        </div>
+
+        <!-- استبدل العناصر الثلاثة form-group الخاصة بالنموذج واللغة والمهمة بهذا الكود -->
+        <div class="row-group">
+            <div class="inline-field">
+                <label for="model">🧠 النموذج اللغوي:</label>
+                <select id="model">
+                    <option selected>base</option>
+                    <option>small</option>
+                    <option>medium</option>
+                </select>
+            </div>
+
+            <div class="inline-field">
+                <label for="language">🌐 اللغة المنطوقة:</label>
+                <select id="language">
+                    <option value="ar" selected>العربية</option>
+                    <option value="en">الإنجليزية</option>
+                    <option value="fr">الفرنسية</option>
+                    <option value="es">الإسبانية</option>
+                </select>
+            </div>
+
+            <div class="inline-field">
+                <label for="task">🎯 نوع المهمة:</label>
+                <select id="task">
+                    <option value="transcribe" selected>نسخ الكلام كما هو</option>
+                    <option value="translate">ترجمة إلى الإنجليزية</option>
+                </select>
+            </div>
+        </div>
+
+
+        <div class="action-wrapper">
+            <button id="processBtn" class="main-action">🎬 بدء المعالجة</button>
+        </div>
+
+
+        <div id="progress"></div>
+        <pre id="output"></pre>
+
+        <!-- 👇 الحقوق هنا -->
+        <div class="footer">
+            © rayan almalki (rn0x) – i8x.net – 966553556010
+        </div>
+
+    </div>
+
+
+    <script src="renderer.js"></script>
+</body>
+
+</html>
