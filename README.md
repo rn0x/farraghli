@@ -10,9 +10,12 @@
 ![preview](/screenshots/Farraghli_WX2bAAGlmQ.png)
 <br>
 
+
+![GitHub all releases](https://img.shields.io/github/downloads/rn0x/farraghli/total?color=blue&label=Total%20Downloads)
+
 </div>
 
-**فرّغلي** هو تطبيق سطح مكتب يشبه التطبيقات الأصلية (Native) مبني باستخدام **Electron**، ويستخدم تقنية **Whisper** من OpenAI لتحويل الكلام المسموع في مقاطع الفيديو إلى نص مكتوب بدقة عالية، مع إمكانية الترجمة وحفظ الترجمة النصية بصيغ متعددة: `.srt` و `.txt` و `.json`.
+**فرّغلي** هو تطبيق سطح مكتب مبني باستخدام **Electron**، ويستخدم تقنية **Whisper** من OpenAI لتحويل الكلام المسموع في مقاطع الفيديو إلى نص مكتوب بدقة عالية، مع إمكانية الترجمة وحفظ الترجمة النصية بصيغ متعددة: `.srt` و `.txt` و `.json`.
 
 ---
 
